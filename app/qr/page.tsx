@@ -50,7 +50,7 @@ export default async function QrPrintPage() {
         <div className="p-4 bg-[#F5C518] rounded-2xl inline-block shadow-lg border-4 border-black mb-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/api/qr?format=png"
+            src="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
             alt="Crazy Bites Menu QR Code"
             width={240}
             height={240}
@@ -71,7 +71,7 @@ export default async function QrPrintPage() {
         {/* Action buttons */}
         <div className="flex flex-col gap-2 mt-6">
           <a
-            href="/api/qr?format=png"
+            href="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
             download="crazy-bites-qr.png"
             className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#F5C518] hover:bg-[#e0b314] text-black font-bold text-xs uppercase rounded-xl transition-all shadow-md"
           >

@@ -200,19 +200,19 @@ export default async function AdminDashboardPage() {
             </div>
             <div className="p-2 bg-[#F5C518] rounded-xl border-2 border-black">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/api/qr?format=png" alt="QR Code" width={70} height={70} className="rounded" />
+              <img src="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F" alt="QR Code" width={70} height={70} className="rounded" />
             </div>
           </div>
           <div className="flex items-center gap-3 mt-4 pt-4 border-t border-neutral-800">
             <a
-              href="/api/qr?format=png"
+              href="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
               download="crazy-bites-table-qr.png"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#F5C518] text-black font-bold text-xs rounded-lg"
             >
               Download PNG
             </a>
             <a
-              href="/api/qr?format=svg"
+              href="/api/qr?format=svg&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
               download="crazy-bites-vector-qr.svg"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-neutral-300 font-bold text-xs rounded-lg transition-colors"
             >

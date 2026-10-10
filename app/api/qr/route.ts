@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import QRCode from 'qrcode';
 
+export const dynamic = 'force-dynamic';
+
+const DEFAULT_TARGET_URL = 'https://crazy-bites.netlify.app/';
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const url = searchParams.get('url') || request.nextUrl.origin || 'https://crazybites.menu';
+    const url = searchParams.get('url') || process.env.NEXT_PUBLIC_SITE_URL || DEFAULT_TARGET_URL;
     const format = searchParams.get('format') || 'png';
 
     if (format === 'svg') {

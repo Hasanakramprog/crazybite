@@ -41,7 +41,11 @@ export const QrModal: React.FC<QrModalProps> = ({ lang }) => {
 
   const handleCopy = () => {
     if (typeof window !== 'undefined') {
-      navigator.clipboard.writeText(window.location.origin);
+      const siteUrl = 'https://crazy-bites.netlify.app/';
+      const urlToCopy = window.location.origin.includes('localhost')
+        ? siteUrl
+        : (window.location.origin || siteUrl);
+      navigator.clipboard.writeText(urlToCopy);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
@@ -86,7 +90,7 @@ export const QrModal: React.FC<QrModalProps> = ({ lang }) => {
           <div className="p-3 bg-[#F5C518] rounded-2xl shadow-xl border-4 border-black inline-block">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/api/qr?format=png"
+              src="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
               alt="Crazy Bites Menu QR Code"
               width={200}
               height={200}
@@ -98,7 +102,7 @@ export const QrModal: React.FC<QrModalProps> = ({ lang }) => {
         {/* Buttons */}
         <div className="flex flex-col gap-2.5">
           <a
-            href="/api/qr?format=png"
+            href="/api/qr?format=png&url=https%3A%2F%2Fcrazy-bites.netlify.app%2F"
             download="crazy-bites-menu-qr.png"
             className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#F5C518] hover:bg-[#e0b314] text-black font-black text-xs uppercase tracking-wider rounded-xl transition-all shadow-md active:scale-[0.98]"
           >
