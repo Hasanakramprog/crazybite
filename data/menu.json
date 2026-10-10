@@ -1,0 +1,350 @@
+{
+  "settings": {
+    "restaurant_name": "Crazy Bites",
+    "tagline_en": "Good Food • Bold Flavors • Always Crazy",
+    "tagline_ar": "أكل طيب • نكهات قوية • دايمًا كريزي",
+    "whatsapp": "+96176191122",
+    "instagram": "crazybites.lb",
+    "maps_url": "https://maps.google.com/?q=Crazy+Bites",
+    "hours": "Daily: 12:00 PM – 1:00 AM",
+    "logo_url": "/images/logo.png",
+    "default_currency": "USD",
+    "lbp_rate": 900000
+  },
+  "categories": [
+    {
+      "id": "cat-sandwiches",
+      "slug": "sandwiches",
+      "name_en": "Sandwiches",
+      "name_ar": "ساندويش",
+      "sort_order": 1,
+      "is_visible": true,
+      "items": [
+        {
+          "id": "item-fajita",
+          "name_en": "Fajita",
+          "name_ar": "فاهيتا",
+          "description_en": "Sautéed chicken, bell peppers, onions, melted cheese & signature Mexican sauce",
+          "description_ar": "دجاج متبل، فليفلة، بصل، جبنة ذائبة وصوص مكسيكي خاص",
+          "price_usd": 7,
+          "tags": [
+            "popular"
+          ],
+          "is_available": true,
+          "sort_order": 1
+        },
+        {
+          "id": "item-francisco",
+          "name_en": "Francisco",
+          "name_ar": "فرانسيسكو",
+          "description_en": "Grilled chicken strips, sweet corn, mushrooms, melted mozzarella & mayo",
+          "description_ar": "شرائح دجاج مشوي، ذرة، فطر، جبنة موزاريلا ومايونيز",
+          "price_usd": 6,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 2
+        },
+        {
+          "id": "item-philadelphia",
+          "name_en": "Philadelphia",
+          "name_ar": "فيلادلفيا",
+          "description_en": "Tender beef slices, grilled onions, mushrooms, melted cheddar & special steak sauce",
+          "description_ar": "شرائح لحم طرية، بصل مشوي، فطر، جبنة شيدر وصوص الستيك المميز",
+          "price_usd": 7,
+          "tags": [
+            "best-seller"
+          ],
+          "is_available": true,
+          "sort_order": 3
+        },
+        {
+          "id": "item-sub",
+          "name_en": "Sub",
+          "name_ar": "ساب",
+          "description_en": "Classic deli cold cuts, cheese, fresh lettuce, tomatoes & special sub dressing",
+          "description_ar": "كلد كت كلاسيكي، جبنة، خس طازج، طماطم ودريسينج الساب المميز",
+          "price_usd": 5,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 4
+        },
+        {
+          "id": "item-crispy",
+          "name_en": "Crispy",
+          "name_ar": "كرسبي",
+          "description_en": "Golden breaded fried chicken tenderloins, lettuce, pickles & garlic mayo",
+          "description_ar": "أصابع دجاج كرسبي مقرمشة، خس، كبيس ومايونيز بالثوم",
+          "price_usd": 5,
+          "tags": [
+            "popular"
+          ],
+          "is_available": true,
+          "sort_order": 5
+        },
+        {
+          "id": "item-zinger",
+          "name_en": "Zinger",
+          "name_ar": "زنجر",
+          "description_en": "Spicy crunchy chicken breast, jalapeños, lettuce & spicy fire sauce",
+          "description_ar": "صدر دجاج كرسبي حار، هلابينو، خس وصوص حار ناري",
+          "price_usd": 6,
+          "tags": [
+            "spicy"
+          ],
+          "is_available": true,
+          "sort_order": 6
+        },
+        {
+          "id": "item-twister",
+          "name_en": "Twister",
+          "name_ar": "تويستر",
+          "description_en": "Crispy chicken strips wrapped in tortilla with lettuce, tomato & ranch",
+          "description_ar": "ستربس دجاج كرسبي بخبز التورتيلا مع خس، طماطم ورانش",
+          "price_usd": 5,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 7
+        },
+        {
+          "id": "item-steak",
+          "name_en": "Steak",
+          "name_ar": "ستيك",
+          "description_en": "Premium grilled steak cuts, melted provolone cheese & caramelized onions",
+          "description_ar": "قطع لحم ستيك ممتازة، جبنة بروفولون وبصل مكرمل",
+          "price_usd": 7,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 8
+        },
+        {
+          "id": "item-chicken-breast",
+          "name_en": "Chicken Breast",
+          "name_ar": "تشكن برست",
+          "description_en": "Lean grilled chicken breast, pickles, garlic paste & crisp lettuce",
+          "description_ar": "صدر دجاج مشوي صحي، كبيس، كريم ثوم وخس",
+          "price_usd": 5,
+          "tags": [
+            "healthy"
+          ],
+          "is_available": true,
+          "sort_order": 9
+        },
+        {
+          "id": "item-soda",
+          "name_en": "Soda",
+          "name_ar": "سودة",
+          "description_en": "Freshly sautéed chicken liver with garlic, lemon & pomegranate molasses",
+          "description_ar": "سودة دجاج طازجة مقلية بالثوم والحامض ودبس الرمان",
+          "price_usd": 4,
+          "tags": [
+            "traditional"
+          ],
+          "is_available": true,
+          "sort_order": 10
+        },
+        {
+          "id": "item-fries",
+          "name_en": "Fries Sandwich",
+          "name_ar": "بطاطا",
+          "description_en": "Crispy golden french fries in Lebanese bread with coleslaw, pickles & ketchup",
+          "description_ar": "بطاطا مقلية مقرمشة مع سلطة كولسلو، كبيس وكاتشب بخبز لبناني",
+          "price_usd": 3,
+          "tags": [
+            "classic"
+          ],
+          "is_available": true,
+          "sort_order": 11
+        },
+        {
+          "id": "item-shawarma",
+          "name_en": "Shawarma",
+          "name_ar": "شاورما",
+          "description_en": "Traditional spiced shawarma, pickles, garlic sauce / tarator in soft flatbread",
+          "description_ar": "شاورما بتتبيلة أصيلة، كبيس، كريم ثوم أو طراطور",
+          "price_usd": 4,
+          "tags": [
+            "popular"
+          ],
+          "is_available": true,
+          "sort_order": 12
+        }
+      ]
+    },
+    {
+      "id": "cat-burgers",
+      "slug": "burgers",
+      "name_en": "Burgers",
+      "name_ar": "برجر",
+      "sort_order": 2,
+      "is_visible": true,
+      "items": [
+        {
+          "id": "item-cheese-burger",
+          "name_en": "Cheese Burger",
+          "name_ar": "تشيز برجر",
+          "description_en": "100% pure beef patty, double American cheddar, pickles, onion, house burger sauce",
+          "description_ar": "برجر لحم بقري صافي، شيدر أمريكي مدبل، كبيس، بصل وصوص برجر خاص",
+          "price_usd": 6,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 1
+        },
+        {
+          "id": "item-american-burger",
+          "name_en": "American Burger",
+          "name_ar": "اميركان برجر",
+          "description_en": "Beef patty, smoky beef bacon, cheddar cheese, crisp lettuce, tomato, BBQ sauce",
+          "description_ar": "برجر لحم، بيكون بقري مدخن، شيدر، خس، طماطم وصوص باربكيو",
+          "price_usd": 6,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 2
+        },
+        {
+          "id": "item-lebanese-burger",
+          "name_en": "Lebanese Burger",
+          "name_ar": "لبنانية برجر",
+          "description_en": "Authentic Lebanese burger with coleslaw, fries, pickles & cocktail sauce",
+          "description_ar": "البرجر اللبناني الأصيل مع سلطة كولسلو، بطاطا، كبيس وصوص كوكتيل",
+          "price_usd": 5,
+          "tags": [
+            "classic"
+          ],
+          "is_available": true,
+          "sort_order": 3
+        },
+        {
+          "id": "item-crazy-bites-burger",
+          "name_en": "Crazy Bites Burger",
+          "name_ar": "برجر كريزي بايتس",
+          "description_en": "Signature double smash patty, melted triple cheese, caramelized onions & secret crazy sauce",
+          "description_ar": "البرجر الأسطوري المميز دبل لحم، جبنة ثلاثية، بصل مكرمل وصوص كريزي السري",
+          "price_usd": 8,
+          "tags": [
+            "signature",
+            "best-seller"
+          ],
+          "is_available": true,
+          "sort_order": 4
+        }
+      ]
+    },
+    {
+      "id": "cat-grills",
+      "slug": "grills",
+      "name_en": "Grills",
+      "name_ar": "مشاوي",
+      "sort_order": 3,
+      "is_visible": true,
+      "items": [
+        {
+          "id": "item-shaghaf-lahme",
+          "name_en": "Shaghaf Lahme",
+          "name_ar": "شغف لحمة",
+          "description_en": "Tender charcoal-grilled marinated beef chunks served in warm flatbread with biwaz & hommus",
+          "description_ar": "شقف لحمة بلدية طرية مشوية عالفحم مع بيواز وحمص",
+          "price_usd": 4.5,
+          "tags": [
+            "charcoal"
+          ],
+          "is_available": true,
+          "sort_order": 1
+        },
+        {
+          "id": "item-taouk",
+          "name_en": "Taouk",
+          "name_ar": "طاووق",
+          "description_en": "Charcoal-grilled juicy marinated chicken skewers, garlic paste, pickles & fries",
+          "description_ar": "شيش طاووق طري ومتبل مشوي عالفحم، ثوم، كبيس وبطاطا",
+          "price_usd": 4,
+          "tags": [
+            "best-seller",
+            "charcoal"
+          ],
+          "is_available": true,
+          "sort_order": 2
+        }
+      ]
+    },
+    {
+      "id": "cat-meals",
+      "slug": "meals",
+      "name_en": "Meals",
+      "name_ar": "وجبات",
+      "sort_order": 4,
+      "is_visible": true,
+      "items": [
+        {
+          "id": "item-chicken-shawarma-meal",
+          "name_en": "Chicken Shawarma Meal",
+          "name_ar": "وجبة شاورما دجاج",
+          "description_en": "Sliced chicken shawarma platter served with golden fries, garlic dip, coleslaw & pickles",
+          "description_ar": "صحن شاورما دجاج مقطعة مع بطاطا مقلية، كريم ثوم، كولسلو ومخلل",
+          "price_usd": 5.5,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 1
+        },
+        {
+          "id": "item-turkey-shawarma-meal",
+          "name_en": "Turkey Shawarma Meal",
+          "name_ar": "وجبة شاورما تركي",
+          "description_en": "Juicy turkey shawarma platter served with fries, special dipping sauces & pickles",
+          "description_ar": "وجبة شاورما تركي شهية مع بطاطا مقلية، صوصات ومخلل",
+          "price_usd": 7,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 2
+        },
+        {
+          "id": "item-crispy-meal-small",
+          "name_en": "Crispy Meal (Small)",
+          "name_ar": "وجبة كرسبي صغيرة",
+          "description_en": "3 pcs golden crunchy chicken tenders, french fries, coleslaw, garlic & honey mustard dip",
+          "description_ar": "٣ قطع دجاج كرسبي مقرمش، بطاطا مقلية، كولسلو، ثوم وهني ماسترد",
+          "price_usd": 5,
+          "tags": [],
+          "is_available": true,
+          "sort_order": 3
+        },
+        {
+          "id": "item-crispy-meal-large",
+          "name_en": "Crispy Meal (Large)",
+          "name_ar": "وجبة كرسبي كبيرة",
+          "description_en": "5 pcs golden crunchy chicken tenders, generous french fries, coleslaw, bun & dips",
+          "description_ar": "٥ قطع دجاج كرسبي مقرمش، حصة كبيرة بطاطا، كولسلو، خبزة وصوصات",
+          "price_usd": 8,
+          "tags": [
+            "best-seller"
+          ],
+          "is_available": true,
+          "sort_order": 4
+        }
+      ]
+    },
+    {
+      "id": "cat-charcoal-chicken",
+      "slug": "charcoal-chicken",
+      "name_en": "Charcoal Chicken",
+      "name_ar": "فروج عالفحم",
+      "sort_order": 5,
+      "is_visible": true,
+      "items": [
+        {
+          "id": "item-charcoal-chicken",
+          "name_en": "Charcoal Chicken",
+          "name_ar": "فروج عالفحم",
+          "description_en": "Whole fresh charcoal-grilled chicken marinated in Lebanese herb & garlic spices, served with fresh garlic sauce, pickles & bread",
+          "description_ar": "فروج كامل طازج مشوي عالفحم بتتبيلة مميزة مع كريم ثوم طازج، مخللات وخبز",
+          "price_usd": 15,
+          "tags": [
+            "signature",
+            "charcoal"
+          ],
+          "is_available": true,
+          "sort_order": 1
+        }
+      ]
+    }
+  ]
+}

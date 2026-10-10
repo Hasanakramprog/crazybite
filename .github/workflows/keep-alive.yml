@@ -1,0 +1,25 @@
+name: keep-alive
+
+on:
+  schedule:
+    # Runs daily at 09:00 UTC to prevent Supabase free tier from pausing
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase Database & Site Endpoint
+        run: |
+          echo "Executing daily keep-alive ping to Supabase..."
+          
+          # Direct REST ping to Supabase settings table
+          curl -fsS "https://jlpubxblcfgrnivjmifj.supabase.co/rest/v1/settings?select=id&limit=1" \
+            -H "apikey: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpscHVieGJsY2Zncm5pdmptaWZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE2MTM0NzQsImV4cCI6MjEwNzE4OTQ3NH0.9jC2bt8D9gGExHOKIdmdf3mYV85sO6vkuOK8EAS4boQ' }}" \
+            -o /dev/null -w "Supabase HTTP status: %{http_code}\n" || echo "Supabase ping completed."
+
+          # If site URL is configured, ping public health route as well
+          if [ -n "${{ secrets.MENU_SITE_URL }}" ]; then
+            curl -fsS "${{ secrets.MENU_SITE_URL }}/api/health" || true
+          fi
