@@ -47,6 +47,7 @@ async function main() {
       hours: menuData.settings.hours,
       default_currency: menuData.settings.default_currency,
       logo_url: menuData.settings.logo_url,
+      lbp_rate: menuData.settings.lbp_rate || 89500,
     });
 
     for (const cat of menuData.categories) {

@@ -79,7 +79,9 @@ export async function getMenuData(): Promise<MenuData> {
             hours: typeof settingsData.hours === 'string' ? settingsData.hours : local.settings.hours,
             default_currency: settingsData.default_currency || 'USD',
             logo_url: settingsData.logo_url || local.settings.logo_url || '/images/logo.png',
-            lbp_rate: local.settings.lbp_rate || 89500
+            lbp_rate: (settingsData.lbp_rate !== undefined && settingsData.lbp_rate !== null)
+              ? Number(settingsData.lbp_rate)
+              : (local.settings.lbp_rate || 89500)
           } : local.settings,
           categories
         };

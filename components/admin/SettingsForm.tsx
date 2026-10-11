@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { RestaurantSettings } from '@/lib/types';
 import {
   Settings,
@@ -20,6 +21,7 @@ interface SettingsFormProps {
 }
 
 export const SettingsForm: React.FC<SettingsFormProps> = ({ initialSettings }) => {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
 
@@ -28,6 +30,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialSettings }) =
     setLoading(true);
     const fd = new FormData(e.currentTarget);
     await updateSettings(fd);
+    router.refresh();
     setSavedSuccess(true);
     setTimeout(() => setSavedSuccess(false), 3000);
     setLoading(false);

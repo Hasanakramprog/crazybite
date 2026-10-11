@@ -47,7 +47,8 @@ create table if not exists public.settings (
   instagram        text,
   maps_url         text,
   hours            jsonb,
-  default_currency text not null default 'USD'
+  default_currency text not null default 'USD',
+  lbp_rate         bigint not null default 89500
 );
 
 -- Auto-update updated_at trigger

@@ -15,28 +15,35 @@ export async function updateSettings(formData: FormData) {
   const maps_url = (formData.get('maps_url') as string)?.trim() || '';
   const hours = (formData.get('hours') as string)?.trim() || '';
   const default_currency = (formData.get('default_currency') as string)?.trim() || 'USD';
-  const lbp_rate = formData.get('lbp_rate') ? parseInt(formData.get('lbp_rate') as string) : 89500;
+  const lbpRateRaw = formData.get('lbp_rate');
+  const lbp_rate = lbpRateRaw ? parseInt(lbpRateRaw as string, 10) : 89500;
 
   const supabase = await createClient();
 
   if (supabase) {
     try {
-      await supabase
-        .from('settings')
-        .upsert({
-          id: 1,
-          restaurant_name,
-          tagline_en,
-          tagline_ar,
-          whatsapp,
-          instagram,
-          maps_url,
-          hours,
-          default_currency,
-        });
-      revalidatePath('/');
-      revalidatePath('/admin/settings');
-      return { success: true };
+      const payload: Record<string, any> = {
+        id: 1,
+        restaurant_name,
+        tagline_en,
+        tagline_ar,
+        whatsapp,
+        instagram,
+        maps_url,
+        hours,
+        default_currency,
+        lbp_rate,
+      };
+
+      const { error } = await supabase.from('settings').upsert(payload);
+
+      if (error) {
+        console.warn('Supabase settings update error (trying fallback without lbp_rate):', error.message);
+        // Fallback if lbp_rate column does not exist yet in Supabase table
+        const fallbackPayload = { ...payload };
+        delete fallbackPayload.lbp_rate;
+        await supabase.from('settings').upsert(fallbackPayload);
+      }
     } catch (e) {
       console.warn('Supabase settings update error:', e);
     }
@@ -44,6 +51,7 @@ export async function updateSettings(formData: FormData) {
 
   const menu = getLocalMenuData();
   menu.settings = {
+    ...menu.settings,
     restaurant_name,
     tagline_en,
     tagline_ar,
@@ -57,6 +65,7 @@ export async function updateSettings(formData: FormData) {
   saveLocalMenuData(menu);
 
   revalidatePath('/');
+  revalidatePath('/admin');
   revalidatePath('/admin/settings');
   return { success: true };
 }

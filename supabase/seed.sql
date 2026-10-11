@@ -4,7 +4,7 @@
 -- ==============================================================================
 
 -- Settings
-insert into public.settings (id, restaurant_name, tagline_en, tagline_ar, whatsapp, instagram, default_currency)
+insert into public.settings (id, restaurant_name, tagline_en, tagline_ar, whatsapp, instagram, default_currency, lbp_rate)
 values (
   1,
   'Crazy Bites',
@@ -12,7 +12,8 @@ values (
   'أكل طيب • نكهات قوية • دايمًا كريزي',
   '+96176191122',
   'crazybites.lb',
-  'USD'
+  'USD',
+  89500
 )
 on conflict (id) do nothing;
 
